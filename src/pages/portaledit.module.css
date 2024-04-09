@@ -1,0 +1,79 @@
+/** @format */
+
+.none {
+  display: none;
+}
+.block {
+  min-width: 30vw;
+  border-left: 2px solid gray;
+  padding: 2vw;
+  animation: widtha 1s ease-in-out;
+}
+
+@keyframes widtha {
+  0% {
+    width: 0;
+    min-width: 0;
+    transform: translateX(200px);
+    display: none;
+  }
+  100% {
+    min-width: 30vw;
+    display: block;
+  }
+}
+
+.socialsEditContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+}
+
+.socialEditLabels {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.socialEditInputs {
+  width: 100%;
+  padding: 0.2rem 1rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 0;
+  outline: 0;
+}
+
+.teamEditContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.teamEditLabel {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.teamEditInput {
+  width: 100%;
+  padding: 0.3rem 1rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 0;
+  outline: 0;
+  margin-bottom: 1rem;
+}
+
+.submitButton {
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 0.6rem 1rem;
+  background: #212121;
+  color: #efefef;
+  border: 0;
+  width: fit-content;
+  margin: 1rem;
+  cursor: pointer;
+
+  border-radius: 0px;
+  text-shadow: 7px 7px 14px #d1cece, -7px -7px 14px rgb(255, 252, 252);
+}

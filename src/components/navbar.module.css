@@ -1,0 +1,46 @@
+/** @format */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background: #e0e0e0;
+  height: 72px;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.logo {
+  display: flex;
+  font-size: 1.5vw;
+  font-weight: 700;
+}
+
+.menu {
+  display: flex;
+  gap: 2rem;
+}
+
+.menuItem {
+  padding: 0.5rem 2rem;
+  font-size: 1.2vw;
+  font-weight: 650;
+  border-radius: 12px;
+  background: #e0e0e0;
+  cursor: pointer;
+  box-shadow: 15px -15px 16px #afafaf, -15px 15px 16px #ffffff;
+  &:hover {
+    animation: depth 1.2s ease-in-out;
+  }
+}
+
+@keyframes depth {
+  0% {
+    box-shadow: 15px -15px 16px #afafaf, -15px 15px 16px #ffffff;
+  }
+  10% {
+    box-shadow: none;
+  }
+  100% {
+    box-shadow: inset 15px -15px 16px #afafaf, inset -15px 15px 16px #ffffff;
+  }
+}

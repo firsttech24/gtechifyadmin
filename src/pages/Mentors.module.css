@@ -1,0 +1,180 @@
+/** @format */
+
+.page {
+  display: flex;
+}
+.sideBar {
+  width: 22vw;
+  background-color: #212121;
+  height: 100vh;
+  padding: 1vw;
+  color: whitesmoke;
+
+  .searchBox {
+    display: flex;
+    flex-direction: column;
+    margin-top: 8vh;
+    gap: 0.8vw;
+    .searchHeading {
+      display: flex;
+      align-items: center;
+    }
+    .searchInput {
+      background-color: #212121;
+      font-size: 1.2vw;
+      border: 1px solid whitesmoke;
+      padding: 0.5vw 0.8vw;
+      border-radius: 1.2vw;
+      color: whitesmoke;
+    }
+  }
+}
+.main {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  background: #e0e0e0;
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+.formGroupSelect {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+  padding-top: 2rem;
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  span {
+    min-width: 200px;
+    /* border: 0.4px solid #feefff; */
+    border-radius: 3px;
+    font-size: 1vw;
+    display: flex;
+    align-items: center;
+  }
+  label {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    select {
+      gap: 1vw;
+      /* border: 0.4px solid #feefff; */
+      padding: 0.7rem 1rem;
+      border-radius: 3px;
+      font-size: 1vw;
+      background-color: #212121;
+      color: whitesmoke;
+      width: 20vw;
+    }
+  }
+}
+
+.filteredItemsBox {
+  display: flex;
+  padding-top: 2vw;
+  flex-direction: column;
+  .filteredItems {
+    display: flex;
+    padding: 0.5rem 0;
+    gap: 1rem;
+    input {
+      width: 2vw;
+    }
+  }
+}
+
+.unapprovedContainer {
+  /* height: 40vh; */
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.unapprovedContainer .unapprovedMentors {
+  display: flex;
+  margin: 1rem;
+  padding: 1rem;
+  gap: 2rem;
+  overflow-x: scroll;
+  width: 70vw;
+
+  /* scrollbar-width: thin; */
+  /* scrollbar-color: #888 #f1f1f1; */
+}
+
+.allContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  .allMentors {
+    margin: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+  }
+}
+
+@keyframes hoverEffect {
+  0% {
+    box-shadow: 5px 5px 10px #7b7b7b, -5px -5px 10px #ffffff;
+  }
+  20% {
+    border-radius: 16px;
+    background: #e0e0e0;
+    box-shadow: inset 0px 0px 0px #afafaf, inset -0px -0px 0px #ffffff;
+  }
+  100% {
+    border-radius: 3px;
+    background: #e0e0e0;
+    box-shadow: inset 15px 15px 18px #afafaf, inset -9px -9px 18px #ffffff;
+  }
+}
+
+.MentorReviewCard {
+  min-width: 250px;
+  max-width: 250px;
+  border-radius: 16px;
+  background: #e0e0e0;
+  box-shadow: 5px 5px 10px #7b7b7b, -5px -5px 10px #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  gap: 1rem;
+  transition: transform 1.2s ease-in-out;
+  &:hover {
+    cursor: pointer;
+    animation: hoverEffect 0.7s ease-in-out forwards;
+  }
+  .name {
+    font-size: 1.5rem;
+  }
+  .profilePic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .company,
+  .profileNames {
+    font-size: 1rem;
+  }
+  .reviewButton {
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 3px;
+    background: #212121;
+    color: #e0e0e0;
+    box-shadow: inset 9px 9px 18px #1a1a1a, inset -9px -9px 18px #282828;
+    border: 0;
+    padding: 0.2rem 1rem;
+  }
+}

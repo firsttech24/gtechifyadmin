@@ -1,0 +1,72 @@
+/** @format */
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #f0f0f0; /* Adjusted background color */
+  padding: 20px;
+  border-radius: 16px; /* Increased border-radius for a softer look */
+  box-shadow: 10px 10px 20px #c7c7c7, -10px -10px 20px #ffffff; /* Soft box-shadow to create a neumorphic effect */
+}
+
+.section {
+  margin-bottom: 30px;
+}
+
+.section h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.section p {
+  margin: 0;
+  color: #666;
+}
+
+.link {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 8px;
+  border: 1px solid #ddd;
+}
+
+.table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  text-align: left;
+}
+
+.approvalButton {
+  background-color: #007bff;
+  border: 0;
+  padding: 0.5rem 2rem;
+  color: whitesmoke;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.submitButton {
+  color: whitesmoke;
+  background-color: #007bff;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+  width: fit-content;
+}
