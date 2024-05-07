@@ -1,14 +1,8 @@
-/**
- * eslint-disable react/prop-types
- *
- * @format
- */
-
 /** @format */
 
 import React, { useEffect, useState } from "react";
 import styles from "./portaledit.module.css";
-import { store } from "../../../global-techify-frontend/src/config/firebase";
+import { store } from "./../configs/firebase.js";
 import { uploadBytes, ref, getDownloadURL } from "firebase/storage";
 import { v4 } from "uuid";
 
@@ -82,7 +76,13 @@ const PortalEdit = ({
   const handleSocialSubmit = (e) => {
     e.preventDefault();
     // console.log(socials);
-    portalData.techifySocials = socials;
+    if(portalData?.techifySocials){
+        portalData.techifySocials = socials;
+    }
+    else
+    setPortalData({
+        techifySocials : socials
+    })
     console.log(portalData);
     fetch(`${import.meta.env.VITE_HOST_API}/portal/set/${portalData._id}`, {
       method: "POST",

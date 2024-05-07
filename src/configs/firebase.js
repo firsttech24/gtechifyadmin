@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import {getStorage} from "firebase/stroge"
+import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
     apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
@@ -11,4 +11,15 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-export const store = getStorage(app);
+let store;
+
+try {
+    store = getStorage(app);
+    // Attempt to perform storage operations
+} catch (error) {
+    console.error("Error occurred:", error);
+}
+
+export {store};
+
+

@@ -17,17 +17,22 @@ const PortalPage = () => {
     fetchTeam();
   }, []);
 
-  const fetchTeam = async () => {
-    try {
-      const response = await fetch(
-        `${import.meta.env.VITE_HOST_API}/portal/get`
-      )
-        .then((response) => response.json())
-        .then((data) => setPortalData(data[0]));
-    } catch (error) {
-      console.error("Error fetching team members:", error);
-    }
-  };
+ const fetchTeam = async () => {
+   try {
+     const response = await fetch(
+       `${import.meta.env.VITE_HOST_API}/portal/get`
+     );
+     if (!response.ok) {
+       throw new Error("Failed to fetch team members");
+     }
+     const data = await response.json();
+     setPortalData(data[0]);
+     console.log("Portal Data:", data[0]);
+   } catch (error) {
+     console.error("Error fetching team members:", error);
+   }
+ };
+
 
   const handleEdit = (member) => {
     setEditMember(member);
