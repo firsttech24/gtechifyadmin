@@ -3,7 +3,7 @@
 .container {
   max-width: 800px;
   margin: 0 auto;
-  background-color: #f0f0f0; /* Adjusted background color */
+  background-color: #f0f0f0; 
   padding: 20px;
   border-radius: 16px; /* Increased border-radius for a softer look */
   box-shadow: 10px 10px 20px #c7c7c7, -10px -10px 20px #ffffff; /* Soft box-shadow to create a neumorphic effect */
